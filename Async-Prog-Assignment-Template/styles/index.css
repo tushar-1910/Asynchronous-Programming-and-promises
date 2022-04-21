@@ -1,0 +1,74 @@
+html
+{
+    border: 3px solid rgb(61, 227, 253);
+}
+body
+{
+    background-color: #ddd;
+}
+#navbar
+{
+    height: 50px;
+    margin: 20px 0px 20px 0px ;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: row-reverse;
+}
+#options
+{
+    align-items: center;
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+}
+#options>a
+{
+    text-decoration: none;
+    color: black;
+}
+#movies
+{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+
+}
+.box
+{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    padding: 20px;
+    background-color: rgb(247, 230, 239);
+}
+
+.box>img
+{
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+#slideshow>img
+{   
+    height: 300px;
+    display: block;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.box>p,h1
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+input
+{
+    margin: auto;
+}
+@media all and (min-width: 80px) and (max-width: 450px)
+{
+    #container
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
