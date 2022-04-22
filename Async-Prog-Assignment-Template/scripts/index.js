@@ -84,7 +84,11 @@ function display(movie) {
 
 display(movie)
 
-var a = 0;
+var a = 1;
+var image = document.createElement('img');
+image.src = movie[0].img_src;
+document.getElementById('slideshow').innerHTML="";
+document.getElementById('slideshow').append(image);
 
 var slideshow = setInterval(() => {
     if (a == 9) {

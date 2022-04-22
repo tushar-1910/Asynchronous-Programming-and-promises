@@ -1,0 +1,47 @@
+html
+{
+    border: 3px solid rgb(61, 227, 253);
+}
+#navbar {
+    height: 50px;
+    margin: 20px 0px 20px 0px;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#options {
+    align-items: center;
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+}
+
+#options>a {
+    text-decoration: none;
+    color: black;
+}
+
+#signup-form-div {
+    height: 420px;
+    width: 400px;
+    border: 0.5px solid grey;
+    margin: auto;
+    padding: 10px;
+    background-color: #ddd;
+}
+
+p {
+    font-style: initial;
+    font-weight: bold;
+    margin-bottom: 1%;
+}
+
+input {
+    height: 25px;
+    width: 90%;
+    border-radius: 4px;
+    border: none;
+    margin-left: 8px;
+    border-bottom: 1px solid grey;
+}

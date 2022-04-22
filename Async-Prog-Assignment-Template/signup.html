@@ -1,22 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Signup</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="./styles/signup.css">
+</head>
 
-    <body>
-        <div id="signup-form-div">
-
-            <form>
-                <!--Write form input elements here-->
-
-            </form>
-
+<body>
+    <div id="navbar">
+        <div id="options">
+            <a href="./index.html">
+                <h2>Home</h2>
+            </a>
+            <a href="./login.html">
+                <h2>Login</h2>
+            </a>
+            <a href="./signup.html">
+                <h2>Sign up</h2>
+            </a>
         </div>
-    </body>
+    </div>
+    <div id="signup-form-div">
+
+        <h1>Create account</h1>
+        <form>
+            <p>Name</p>
+            <input type="text" id="name" placeholder="enter your name" required>
+            <p>Contact no:</p>
+            <input type="number" id="contact" placeholder="Enter contact number" required>
+            <p>Email</p>
+            <input type="text" id="email" placeholder="enter your email" required>
+            <p>password</p>
+            <input type="password" id="password" placeholder="enter your password" required>
+            <p>password must be at least 6 characters</p>
+            <br>
+            <input type="submit" value="register">
+
+        </form>
+
+    </div>
+</body>
+<script src="./scripts/signup.js"></script>
 
 </html>
