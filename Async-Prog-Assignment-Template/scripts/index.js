@@ -59,8 +59,10 @@ var movie = [
     },
 ]
 
-localStorage.setItem('movies' , JSON.stringify(movie));
+localStorage.setItem('movies', JSON.stringify(movie));
 function display(movie) {
+    document.querySelector('#movies').innerHTML = '';
+
     movie.forEach(moviedata => {
         var box = document.createElement('div');
         box.setAttribute('class', "box");
@@ -87,7 +89,7 @@ display(movie)
 var a = 1;
 var image = document.createElement('img');
 image.src = movie[0].img_src;
-document.getElementById('slideshow').innerHTML="";
+document.getElementById('slideshow').innerHTML = "";
 document.getElementById('slideshow').append(image);
 
 var slideshow = setInterval(() => {
@@ -96,6 +98,25 @@ var slideshow = setInterval(() => {
     }
     var image = document.createElement('img');
     image.src = movie[a++].img_src;
-    document.getElementById('slideshow').innerHTML="";
+    document.getElementById('slideshow').innerHTML = "";
     document.getElementById('slideshow').append(image);
 }, 3000)
+
+
+var original =[];
+movie.forEach((ele) => {
+    original.push(ele);
+})
+console.log(original)
+document.getElementById('rating-sort').addEventListener('change', function () {
+    var sort = document.querySelector('#rating-sort').value;
+    movie.sort(function (a, b) {
+        if (sort == 'high') {
+            return b.rating - a.rating;
+        }
+        else if (sort == 'low') {
+            return a.rating - b.rating;
+        }
+    });
+    display(movie);
+})
